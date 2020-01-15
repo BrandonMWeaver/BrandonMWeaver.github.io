@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Table Relations"
-date:       2020-01-13 04:52:12 +0000
+date:       2020-01-12 23:52:13 -0500
 permalink:  table_relations
 ---
 
@@ -12,13 +12,13 @@ At the moment, I have only created the users table and plan to have everything r
 
 ```
 class CreatePosts < ActiveRecord::Migration
-    def change
-		    create_table :posts do |t|
-				    t.string :code_snippet
-						t.string :description
-						t.integer :user_id
-				end
-		end
+ def change
+  create_table :posts do |t|
+		t.string :code_snippet
+		t.string :description
+		t.integer :user_id
+	end
+ end
 end
 ```
 

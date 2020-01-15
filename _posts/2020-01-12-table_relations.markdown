@@ -14,10 +14,10 @@ At the moment, I have only created the users table and plan to have everything r
 class CreatePosts < ActiveRecord::Migration
  def change
   create_table :posts do |t|
-		t.string :code_snippet
-		t.string :description
-		t.integer :user_id
-	end
+   t.string :code_snippet
+   t.string :description
+   t.integer :user_id
+  end
  end
 end
 ```

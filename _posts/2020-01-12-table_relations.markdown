@@ -1,39 +1,19 @@
 ---
 layout: post
-title:      "Table Relations"
+title:      "Recoder - My Second Portfolio Project"
 date:       2020-01-12 23:52:13 -0500
 permalink:  table_relations
 ---
 
 
-As I write this I am working on a project which involves tracking users and their posts. While I have been aware of technologies like SQL for some time, and have persisted data within text files for past projects, I have only recently grasped how table relations work and how to implement them in Ruby.
+Before I began working on this project I was using the in-browser IDE. I have had Visual Studio Code for quite some time and finally decided to install Git and Ruby on my local machine for this project. After a few hours of struggling to get things working properly I realized how beneficial it is to have a local repository for projects like these. I no longer needed to worry about losing connection or logging in to learn.co to be productive, and in the long run, it has saved me a lot of time.
 
-At the moment, I have only created the users table and plan to have everything related to the users table (aside from posts) working before I begin implementing the posts table. For my project posts will include a code snippet and a description. The migration for posts will be as follows...
+For my project I decided to build a web application which allows a user to view and create posts which are comprised of a code snippet and a description. I have been learning multiple languages over the past two years and figured it would be great to have a place to view small chunks of code written in various languages and frameworks to remind me of the syntax as I continue to learn.
 
-```
-class CreatePosts < ActiveRecord::Migration
- def change
-  create_table :posts do |t|
-   t.string :code_snippet
-   t.string :description
-   t.integer :user_id
-  end
- end
-end
-```
+I was initially concerned with this project after seeing examples from other Flatiron students. CSS is something that I have worked with sparingly in the past and it seemed as though these particular students had a pretty good grasp of it. As I write this, I am nearing the end of my project and have learned a lot, I now feel at least somewhat comfortable writing CSS, and although my layout doesn't look great, I'm happy with how it turned out and look forward to learning more about CSS in my spare time.
 
-within the User class will be...
+The first thing I decided to do with this project (aside from creating the essential scafolding, Gemfile, Rakefile, config/environment.rb etc.) was to create my models and their subsequent tables. I started by building the user model, knowing that each user needed a secure password, each user would have many posts, and I wanted to use a slug to represent their username within each route. This meant building the instance method #slug and the class method .find_by_slug(string). I then proceeded to build the post model which simply belongs to a user. Finally I created the table migrations ensuring that users had a password_digest and posts had a user_id.
 
-```
-has_many :posts
-```
+Buidling RESTful routes was something I was somewhat familiar with prior to this course. I had taken a certification course on C# and we studied building RESTful routes within an ASP.NET MVC application. However, we did not actually apply our knowledge and build the application. Now that I have a good grasp on how to build these routes in a Sinatra application, I will likely attempt to build an ASP.NET application when I have some free time.
 
-and within the Post class...
-
-```
-belongs_to :user
-```
-
-I believe that this solution, although simple, will be everything I need to reach my goals. In the near future I may attempt to build a 'favorites' feature so that users are able to store their favorite posts created by other users. This will involve creating another table named favorties. A favorite will have a ```:post_id``` and a user will have many favorites.
-
-I am still learning about how these relationships work and look forward to building more complex relationships in future projects.
+All in all, I found working on this project to be a very smooth process. I did have to stop a few times and do some research on CSS rules to get things looking the way I wanted them to, but otherwise I was unhindered from start to finish. I had a lot of fun building this application and look forward to learning much more during my time here at Flatiron.

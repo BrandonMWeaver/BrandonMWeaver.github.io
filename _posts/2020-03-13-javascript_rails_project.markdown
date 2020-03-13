@@ -14,9 +14,9 @@ Another challenge which forced me to learn something new was removing elements f
 
 ```
 for (let i = array.length - 1; i >= 0; i--) {
-  if (condition) {
-		array.splice(i, 1);
-	}
+    if (condition) {
+        array.splice(i, 1);
+    }
 }
 ```
 

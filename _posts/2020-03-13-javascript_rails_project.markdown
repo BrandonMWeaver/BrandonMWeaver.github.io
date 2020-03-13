@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "JavaScript/Rails Project"
-date:       2020-03-13 16:55:08 +0000
+date:       2020-03-13 12:55:09 -0400
 permalink:  javascript_rails_project
 ---
 
@@ -14,9 +14,9 @@ Another challenge which forced me to learn something new was removing elements f
 
 ```
 for (let i = array.length - 1; i >= 0; i--) {
-    if (condition) {
-		    array.splice(i, 1);
-		}
+  if (condition) {
+		array.splice(i, 1);
+	}
 }
 ```
 

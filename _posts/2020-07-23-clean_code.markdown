@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Clean Code"
-date:       2020-07-23 22:48:55 +0000
+date:       2020-07-23 18:48:56 -0400
 permalink:  clean_code
 ---
 
@@ -14,4 +14,4 @@ While I have minimal experience working on software projects with other develope
 
 Something that I have been actively practicing is writing code which, as Robert says, "allows the reader to exit early". Essentially, you want to encapsulate any logic for a function into a subset of meaningfully named functions, allowing the body of the function to declaratively express what the function does. This approach allows the person maintaining the code to invest in understanding more about the function as they move down the abstraction chain; this way they are not forced into understanding the low-level details of the function.
 
-I believe that there is an equal if not greater amount of practice necessary to gain the skills required to write code this way, and it's something I'm striving for more as I develop larger applications.
+I believe that there is an equal, if not greater amount of practice necessary to gain the skills required to write code this way, and it's something I'm striving for more as I develop larger applications.
